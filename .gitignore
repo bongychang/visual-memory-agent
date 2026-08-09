@@ -1,0 +1,13 @@
+
+# Ignore the virtual environment
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore the local vector database and generated paths
+index_data/
+
+# Ignore Mac system files (just in case)
+.DS_Store
