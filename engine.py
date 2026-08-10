@@ -65,8 +65,4 @@ class ImageIndex:
         with open(f"{save_path}/paths.pkl", "rb") as f:
             self.image_paths = pickle.load(f)
 
-        results = []
-        for j, i in enumerate(indices[0]):
-            if i != -1: # FAISS returns -1 if there aren't enough images
-                results.append((self.image_paths[i], distances[0][j]))
-        return results
+    
