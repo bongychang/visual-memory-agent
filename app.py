@@ -13,7 +13,7 @@ css = """
 """
 st.markdown(css, unsafe_allow_html=True)
 
-# 3. SIDEBAR: Control Panel
+
 # 3. SIDEBAR: Control Panel
 with st.sidebar:
     st.image("https://cataas.com/cat/gif", width=80) 

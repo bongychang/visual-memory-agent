@@ -54,6 +54,13 @@ class ImageIndex:
         
         # Search the index for the top 'k' closest matches
         distances, indices = self.index.search(query_reshaped, k)
+        
+        # NEW: Map the indices back to the actual file paths and return them
+        results = []
+        for j, i in enumerate(indices[0]):
+            if i != -1: # FAISS returns -1 if there aren't enough images
+                results.append((self.image_paths[i], distances[0][j]))
+        return results
     
     def load(self, save_path="index_data"):
         import faiss
